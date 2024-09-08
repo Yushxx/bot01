@@ -18,8 +18,8 @@ function generate_sequence() {
 // Modèle de séquence
 const sequenceTemplate = `
 🔔 CONFIRMED ENTRY!
-🍎 Apple : 3
-🔐 Attempts: 3
+🍎 Apple : 4
+🔐 Attempts: 5
 ⏰ Validity: 5 minutes
 
 `;
@@ -61,19 +61,15 @@ ${sequenceTemplate}
 
 // Planification des envois de séquences
 const scheduledTimes = [
-    '0-30/5 8 * * *',    // De 8h00 à 8h30 chaque 5 min
-    '0-10/10 9 * * *',   // De 9h00 à 9h30 chaque 10 min
-    '30-59/15 9-10 * * *', // De 9h30 à 11h chaque 15 min
-    '0-7/7 12 * * *',    // De 12h à 13h chaque 7 min
-    '0-30/10 16 * * *',  // De 16h à 16h30 chaque 10 min
-    '25-50/3 16 * * *',  // De 16h25 à 16h50 chaque 3 min
-    '0-30/10 17 * * *',  // De 17h à 17h30 chaque 10 min
-    '0-14/15 18 * * *',  // De 18h à 19h chaque 15 min
-    '0-5/5 20 * * *',    // De 20h à 20h30 chaque 5 min
-    '30-50/20 20 * * *', // De 20h30 à 22h30 chaque 20 min
-    '0-20/3 22 * * *',   // De 22h à 22h20 chaque 3 min
-    '0-30/15 23 * * *',  // De 23h à 00h chaque 15 min
+    '0-30/10 8 * * *',    // De 8h00 à 8h30 chaque 10 min
+    '0-30/10 9 * * *',    // De 9h00 à 9h30 chaque 10 min
+    '0-30/10 16 * * *',   // De 16h00 à 16h30 chaque 10 min
+    '30-50/5 16 * * *',   // De 16h30 à 16h50 chaque 5 min
+    '0-30/10 18 * * *',   // De 18h00 à 18h30 chaque 10 min
+    '0-30/10 20 * * *',   // De 20h00 à 20h30 chaque 10 min
+    '0-30/15 23 * * *',   // De 22h00 à 22h30 chaque 15 min
 ];
+
 
 scheduledTimes.forEach((time) => {
     schedule.scheduleJob(time, () => {
