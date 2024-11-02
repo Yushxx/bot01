@@ -76,7 +76,7 @@ const scheduledTimes = [
 
 scheduledTimes.forEach((time) => {
     schedule.scheduleJob(time, () => {
-        sendSequenceToChannel('@solkah00'); // Remplacez par l'identifiant de votre canal
+        sendSequenceToChannel('-1001923341484'); // Remplacez par l'identifiant de votre canal
     });
 });
 
@@ -103,7 +103,7 @@ bot.on('callback_query', (query) => {
     if (query.data === 'voir_la_pomme') {
         sendSequenceToChannel(chatId);
     } else if (query.data === 'test_message') {
-        sendSequenceToChannel('@solkah00'); // Envoi de séquence au canal
+        sendSequenceToChannel('-1001923341484'); // Envoi de séquence au canal
     }
 });
 
